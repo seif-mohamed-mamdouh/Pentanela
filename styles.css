@@ -25,7 +25,12 @@ html {
 }
 body {
   margin: 0;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     sans-serif;
   color: var(--ink);
   background: #fff;
@@ -96,7 +101,10 @@ textarea {
   right: 0;
   z-index: 100;
   padding: 18px 0;
-  transition: padding 0.35s ease, background 0.35s ease, box-shadow 0.35s ease,
+  transition:
+    padding 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease,
     backdrop-filter 0.35s ease;
 }
 .site-header.scrolled {
@@ -175,7 +183,9 @@ textarea {
   background: var(--navy-800);
   border-radius: 999px;
   box-shadow: 0 10px 26px rgba(11, 63, 112, 0.18);
-  transition: transform 0.25s ease, background 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 .nav-cta:hover {
   transform: translateY(-2px);
@@ -204,7 +214,8 @@ textarea {
   padding: 165px 0 90px;
   display: flex;
   align-items: center;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 80% 20%,
       rgba(47, 121, 183, 0.12),
       transparent 27%
@@ -318,7 +329,10 @@ textarea {
   padding: 0 22px;
   border-radius: 999px;
   font-weight: 800;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 .btn-primary {
   background: var(--navy-800);
@@ -385,7 +399,8 @@ textarea {
     rgba(255, 255, 255, 0.65) 37% 60%,
     rgba(20, 86, 143, 0.05) 61% 100%
   );
-  box-shadow: inset 0 0 0 1px rgba(20, 86, 143, 0.08),
+  box-shadow:
+    inset 0 0 0 1px rgba(20, 86, 143, 0.08),
     0 40px 90px rgba(6, 29, 49, 0.12);
   transition: transform 0.18s ease-out;
 }
@@ -568,7 +583,7 @@ textarea {
   text-align: center;
 }
 .section-heading.centered p {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--muted);
 }
 .section-light .section-heading h2 {
   color: var(--ink);
@@ -624,7 +639,9 @@ textarea {
   position: relative;
   overflow: hidden;
   transform-style: preserve-3d;
-  transition: border-color 0.35s ease, background 0.35s ease,
+  transition:
+    border-color 0.35s ease,
+    background 0.35s ease,
     box-shadow 0.35s ease;
 }
 .service-card::after {
@@ -725,7 +742,10 @@ textarea {
   background: #fff;
   border: 1px solid var(--line);
   box-shadow: 0 14px 35px rgba(6, 29, 49, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 .feature-row:hover {
   transform: translateX(8px);
@@ -917,7 +937,10 @@ textarea {
   background: var(--surface-soft);
   border: 1px solid var(--line);
   position: relative;
-  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 .contact-action:hover {
   transform: translateY(-5px);
@@ -997,7 +1020,9 @@ textarea {
 .reveal-right,
 .reveal-scale {
   opacity: 0;
-  transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
   transition-delay: var(--delay, 0ms);
 }
 .reveal-up {
@@ -1210,5 +1235,61 @@ textarea {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.001ms !important;
+  }
+}
+
+/* Public-developer information and quote transparency */
+.pricing-disclosure {
+  max-width: 950px;
+  margin: 32px auto 0;
+  text-align: center;
+  line-height: 1.8;
+  color: #3f566b;
+}
+.pricing-disclosure a {
+  color: #0b5b9d;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Pricing Section */
+
+.pricing-cta {
+  max-width: 850px;
+  margin: 40px auto 0;
+  padding: 48px 32px;
+  text-align: center;
+  background: linear-gradient(135deg, #0b3f70, #1463a0);
+  border-radius: 24px;
+  color: #ffffff;
+}
+
+.pricing-cta h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.pricing-cta p {
+  max-width: 610px;
+  margin: 0 auto 28px;
+  line-height: 1.8;
+  color: #e0edfa;
+}
+
+.pricing-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .pricing-cta {
+    padding: 36px 24px;
+    margin-top: 40px;
   }
 }
